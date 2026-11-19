@@ -1,56 +1,1212 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Dazzling Skill — Learn digital marketing, SEO, Google Ads, Meta Ads and web development through practical projects.">
-<title>Dazzling Skill | Learn. Build. Grow.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#080b14;--panel:#101727;--panel2:#141d30;--text:#f4f7ff;--muted:#9aa8c1;--blue:#5b8cff;--cyan:#66e3ff;--line:rgba(255,255,255,.09);--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:#5b8cff55;color:#fff}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 80% 10%,#172a5140,transparent 32%),radial-gradient(circle at 10% 45%,#1d3c6a20,transparent 35%);z-index:-1}
-.container{width:min(var(--max),calc(100% - 44px));margin:auto}.nav-wrap{position:sticky;top:0;z-index:50;background:#080b14c9;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-family:'Space Grotesk';font-weight:700;letter-spacing:-.5px}.brand-mark{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--blue));display:grid;place-items:center;color:#08101d;font-size:18px;font-weight:800;box-shadow:0 0 24px #5b8cff35}.brand span{font-size:18px}.brand small{color:var(--blue);font-weight:600}.nav-links{display:flex;align-items:center;gap:30px;color:#b8c4d9;font-size:14px}.nav-links a{transition:.25s}.nav-links a:hover{color:white}.nav-cta,.btn-primary{border:0;background:linear-gradient(110deg,#4e7cff,#64d9f7);color:#07101b;font-weight:700;border-radius:999px;padding:12px 19px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 30px #4c84ff25;transition:.25s}.nav-cta:hover,.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px #4c84ff45}.menu-btn{display:none;background:none;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 11px;font-size:20px}
-.hero{min-height:650px;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:30px;padding:72px 0 80px;position:relative}.hero-copy{position:relative;z-index:2}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #70a1ff30;background:#12203a80;color:#a8c6ff;border-radius:999px;padding:8px 13px;font-size:12px;letter-spacing:1.1px;text-transform:uppercase}.eyebrow:before{content:"";width:7px;height:7px;background:#67dcff;border-radius:50%;box-shadow:0 0 12px #67dcff}.hero h1{font-family:'Space Grotesk';font-size:clamp(45px,6vw,76px);line-height:1.04;letter-spacing:-3.8px;margin:24px 0 20px;font-weight:700}.gradient-text{background:linear-gradient(100deg,#6d9cff 5%,#71e2ff 65%,#b0c6ff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-copy p{color:var(--muted);font-size:17px;line-height:1.8;max-width:530px}.hero-actions{display:flex;gap:13px;align-items:center;margin-top:30px;flex-wrap:wrap}.btn-outline{border:1px solid #ffffff22;background:#ffffff05;color:#e8efff;border-radius:999px;padding:12px 18px;display:inline-flex;align-items:center;gap:8px;transition:.2s}.btn-outline:hover{background:#ffffff12;border-color:#ffffff40}.hero-stats{display:flex;gap:34px;margin-top:44px}.stat strong{font-family:'Space Grotesk';font-size:25px;display:block}.stat span{font-size:12px;color:var(--muted);margin-top:5px;display:block}.hero-visual{min-height:480px;position:relative;display:grid;place-items:center}.orb{width:min(430px,90%);aspect-ratio:1;border-radius:50%;position:relative;background:radial-gradient(circle at 35% 32%,#85dfff 0%,#5a9cff 13%,#304f9e 30%,#121d3a 55%,#090d17 72%);box-shadow:inset -30px -35px 80px #050914,0 0 80px #437aff22;animation:float 7s ease-in-out infinite}.orb:before,.orb:after{content:"";position:absolute;border-radius:50%;border:1px solid #73d8ff45;inset:-26px;transform:rotate(-28deg) scaleY(.42)}.orb:after{inset:-55px;transform:rotate(35deg) scaleY(.34);border-color:#8e9fff30}.orb-core{position:absolute;inset:25%;border-radius:50%;background:radial-gradient(circle at 30% 30%,#d2f7ff,#83baff 30%,#1c4b9b 72%,#0a1021);filter:blur(1px);opacity:.8}.orbit-tag{position:absolute;display:flex;align-items:center;gap:9px;padding:12px 15px;background:#10192acc;border:1px solid #ffffff17;border-radius:14px;backdrop-filter:blur(15px);box-shadow:0 15px 40px #0003;font-size:13px;color:#d9e6ff}.orbit-tag b{font-size:14px}.orbit-tag small{color:#8fa5c6;display:block;margin-top:3px}.orbit-tag .mini-icon{width:33px;height:33px;display:grid;place-items:center;border-radius:10px;background:#203d71;color:#8fdcff;font-size:15px}.tag-one{top:8%;left:2%}.tag-two{right:-2%;top:28%}.tag-three{bottom:10%;left:0}.spark{position:absolute;width:6px;height:6px;border-radius:50%;background:#76dfff;box-shadow:0 0 16px #76dfff;animation:blink 2.5s infinite}.spark.s1{top:20%;right:20%}.spark.s2{bottom:20%;right:10%;animation-delay:1s}
-@keyframes float{50%{transform:translateY(-13px)}}@keyframes blink{50%{opacity:.3;transform:scale(.6)}}
-.trust-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0;background:#ffffff02}.trust-inner{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}.trust-label{font-size:12px;text-transform:uppercase;letter-spacing:1.2px;color:#7787a4}.trust-item{font-family:'Space Grotesk';font-weight:600;color:#7f8ba3;font-size:14px;display:flex;align-items:center;gap:8px}.trust-item i{color:#6c9eff;font-style:normal}
-.section{padding:100px 0}.section-head{max-width:660px;margin-bottom:42px}.section-head .eyebrow{margin-bottom:15px}.section-head h2{font-family:'Space Grotesk';font-size:clamp(32px,4vw,50px);letter-spacing:-2px;line-height:1.12;margin:0 0 16px}.section-head p{color:var(--muted);line-height:1.75;margin:0}.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.course-card{background:linear-gradient(145deg,#131c2e,#0e1422);border:1px solid var(--line);border-radius:22px;padding:24px;min-height:265px;position:relative;overflow:hidden;transition:.3s}.course-card:hover{transform:translateY(-6px);border-color:#6c9cff55;box-shadow:0 18px 50px #0003}.course-card:after{content:"";position:absolute;width:140px;height:140px;border-radius:50%;right:-70px;top:-70px;background:var(--glow,#478cff);opacity:.11;filter:blur(15px)}.course-icon{width:48px;height:48px;border:1px solid #ffffff14;border-radius:14px;background:#18243a;display:grid;place-items:center;font-size:22px;margin-bottom:23px}.course-card h3{font-family:'Space Grotesk';font-size:20px;margin:0 0 10px}.course-card p{font-size:14px;color:var(--muted);line-height:1.65;margin:0}.course-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:24px;color:#a7b9d8;font-size:12px}.course-bottom a{color:#8fcaff;font-weight:700}.course-bottom a:hover{color:#fff}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.about-art{min-height:400px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,#101b2d,#10182a);position:relative;overflow:hidden;display:grid;place-items:center}.about-art:before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,#4389ff65,transparent 70%);filter:blur(8px)}.about-dashboard{width:80%;max-width:380px;background:#0b1220;border:1px solid #ffffff16;border-radius:18px;padding:18px;box-shadow:0 20px 70px #0005;transform:rotate(-4deg);position:relative}.dash-top{display:flex;justify-content:space-between;color:#93a5c2;font-size:11px;margin-bottom:17px}.dash-title{font-size:17px;font-weight:700;margin-bottom:14px}.dash-bars{display:flex;align-items:end;gap:9px;height:130px;padding:12px;border-radius:12px;background:#101a2a}.dash-bars i{display:block;flex:1;border-radius:5px 5px 2px 2px;background:linear-gradient(180deg,#70dfff,#4d7bff);height:var(--h)}.dash-kpis{display:flex;gap:10px;margin-top:12px}.dash-kpi{flex:1;border:1px solid #ffffff10;border-radius:10px;padding:11px}.dash-kpi b{display:block;color:#8edcff;font-size:16px}.dash-kpi small{font-size:10px;color:#7f91ad}.about-content h2{font-family:'Space Grotesk';font-size:clamp(34px,4vw,48px);letter-spacing:-2px;line-height:1.12;margin:16px 0}.about-content p{color:var(--muted);line-height:1.8}.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:25px 0}.feature{display:flex;gap:9px;align-items:center;font-size:14px;color:#d3def4}.feature i{font-style:normal;color:#7de1ff;background:#173252;border-radius:8px;width:24px;height:24px;display:grid;place-items:center}
-.skills{background:#0c111d;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.skill-box{padding:23px;border-radius:17px;background:#111a29;border:1px solid var(--line)}.skill-box h3{font-size:15px;margin:14px 0 8px}.skill-box p{font-size:12px;color:var(--muted);line-height:1.65;margin:0}.skill-symbol{font-size:21px;color:#83cfff}
-.project-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:18px}.project{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#111827;min-height:260px;position:relative}.project-visual{height:150px;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#365f9b,#101a2b 65%);font-size:40px;position:relative;overflow:hidden}.project:nth-child(2) .project-visual{background:radial-gradient(circle at 50% 40%,#6752a8,#171629 65%)}.project:nth-child(3) .project-visual{background:radial-gradient(circle at 50% 40%,#287e8e,#101d28 65%)}.project-visual:after{content:"";position:absolute;width:230px;height:230px;border:1px solid #ffffff20;border-radius:50%}.project-info{padding:20px}.project-info h3{font-size:16px;margin:0 0 8px}.project-info p{font-size:12px;color:var(--muted);margin:0;line-height:1.6}.project-tag{font-size:10px;color:#a3c9ff;text-transform:uppercase;letter-spacing:.8px}
-.cta{padding:0 0 100px}.cta-panel{padding:50px;border-radius:28px;border:1px solid #528bff30;background:radial-gradient(circle at 90% 10%,#345ba630,transparent 40%),linear-gradient(135deg,#111b2d,#0d1421);display:flex;justify-content:space-between;gap:25px;align-items:center;overflow:hidden;position:relative}.cta-panel h2{font-family:'Space Grotesk';font-size:clamp(28px,3.5vw,42px);letter-spacing:-1.6px;margin:0 0 12px}.cta-panel p{color:var(--muted);margin:0;line-height:1.7}.cta-panel .btn-primary{flex-shrink:0}
-.footer{border-top:1px solid var(--line);padding:50px 0 22px;background:#070a12}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}.footer-about p{color:var(--muted);font-size:13px;line-height:1.75;max-width:320px}.footer h4{font-size:13px;margin:0 0 18px}.footer-links{display:grid;gap:12px;color:#9aa8bd;font-size:13px}.footer-links a:hover{color:#fff}.socials{display:flex;gap:9px;margin-top:18px}.socials a{width:34px;height:34px;border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;font-size:12px;color:#a9c9ff;transition:.2s}.socials a:hover{background:#172b4c;border-color:#568dff}.copyright{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;gap:12px;color:#6d7b91;font-size:11px}
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:55px}.hero-visual{min-height:420px}.course-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr;gap:35px}.skill-grid{grid-template-columns:repeat(2,1fr)}.project-grid{grid-template-columns:1fr 1fr}.project:first-child{grid-column:span 2}.footer-grid{grid-template-columns:1fr 1fr}.cta-panel{padding:35px}}
-@media(max-width:650px){.container{width:min(var(--max),calc(100% - 32px))}.nav{height:68px}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#0c1220;border-bottom:1px solid var(--line);padding:20px 24px;flex-direction:column;align-items:flex-start;gap:19px}.nav-links.open{display:flex}.nav-cta{display:none}.menu-btn{display:block}.hero{padding:50px 0 50px;gap:0}.hero h1{font-size:48px;letter-spacing:-2.5px}.hero-copy p{font-size:15px}.hero-stats{gap:23px}.stat strong{font-size:22px}.hero-visual{min-height:360px}.orb{width:280px}.orbit-tag{padding:9px 11px;font-size:11px}.orbit-tag b{font-size:12px}.orbit-tag .mini-icon{width:27px;height:27px}.tag-one{left:-2%;top:6%}.tag-two{right:-3%;top:29%}.tag-three{bottom:8%;left:0}.section{padding:70px 0}.section-head h2{letter-spacing:-1.3px}.course-grid{grid-template-columns:1fr}.course-card{min-height:225px}.about-art{min-height:340px}.feature-list{grid-template-columns:1fr 1fr}.skill-grid{grid-template-columns:1fr 1fr;gap:10px}.skill-box{padding:16px}.project-grid{grid-template-columns:1fr}.project:first-child{grid-column:auto}.cta-panel{flex-direction:column;align-items:flex-start;padding:27px}.cta-panel .btn-primary{margin-top:5px}.footer-grid{grid-template-columns:1fr 1fr;gap:25px}.footer-about{grid-column:span 2}.copyright{flex-direction:column}.trust-inner{justify-content:center}.trust-label{width:100%;text-align:center}}@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090710">
+  <title>Dazzling Skill | Creative Digital Academy</title>
+  <meta name="description" content="Learn digital marketing, web development, SEO, Google Ads and creative skills with Dazzling Skill.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #090710;
+      --surface: #12101c;
+      --surface-2: #1a1726;
+      --purple: #9b5cff;
+      --violet: #c49aff;
+      --pink: #f18cff;
+      --white: #f8f5ff;
+      --muted: #aaa4b9;
+      --border: rgba(255,255,255,.1);
+      --font: "DM Sans", sans-serif;
+      --heading: "Space Grotesk", sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--violet);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: var(--purple);
+    }
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      max-width: 690px;
+      margin-bottom: 48px;
+    }
+
+    .section-heading h2 {
+      font: 700 clamp(36px, 5vw, 58px)/1.08 var(--heading);
+      letter-spacing: -2px;
+      margin: 17px 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 570px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(110deg, #fff 5%, #c69cff 48%, #e98bff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 23px;
+      border-radius: 7px;
+      background: linear-gradient(110deg, #8141e8, #bd72f6);
+      color: white;
+      font-weight: 800;
+      font-size: 14px;
+      border: 1px solid transparent;
+      transition: .3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 35px rgba(155,92,255,.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--purple);
+      background: rgba(155,92,255,.1);
+      box-shadow: none;
+    }
+
+    /* NAVIGATION */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(9,7,16,.86);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font: 700 21px var(--heading);
+      letter-spacing: -.7px;
+    }
+
+    .logo-icon {
+      display: grid;
+      place-items: center;
+      width: 37px;
+      height: 37px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, #8041e6, #d18bff);
+      font-size: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #c7c1d1;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--violet);
+    }
+
+    .nav-cta {
+      padding: 11px 18px;
+      border-radius: 6px;
+      background: var(--white);
+      color: #171020;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: white;
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      font-size: 23px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 90px 0;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      right: -180px;
+      top: -70px;
+      background: radial-gradient(circle, rgba(136,72,236,.25), transparent 68%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .hero-copy h1 {
+      font: 700 clamp(49px, 7vw, 82px)/1.02 var(--heading);
+      letter-spacing: -4px;
+      margin: 24px 0;
+    }
+
+    .hero-copy > p {
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.85;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 35px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .avatar-stack {
+      display: flex;
+    }
+
+    .avatar-stack span {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #7650a9;
+      border: 2px solid var(--bg);
+      margin-left: -7px;
+      font-size: 12px;
+    }
+
+    .avatar-stack span:first-child {
+      margin-left: 0;
+    }
+
+    .hero-art {
+      min-height: 460px;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .art-orbit {
+      position: absolute;
+      width: 390px;
+      height: 390px;
+      border: 1px solid rgba(194,143,255,.23);
+      border-radius: 50%;
+      transform: rotate(-25deg) scaleY(.7);
+    }
+
+    .art-orbit::before,
+    .art-orbit::after {
+      content: "";
+      position: absolute;
+      inset: 25px;
+      border: 1px solid rgba(194,143,255,.18);
+      border-radius: 50%;
+    }
+
+    .art-orbit::after {
+      inset: 65px;
+    }
+
+    .art-core {
+      position: relative;
+      width: 275px;
+      height: 320px;
+      border-radius: 46% 46% 18% 18%;
+      background: linear-gradient(145deg, #bc87ff, #6129ba 52%, #24143e);
+      box-shadow: 0 0 100px rgba(155,92,255,.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .art-core::before {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.12);
+      top: -80px;
+      left: -65px;
+    }
+
+    .art-symbol {
+      font: 700 125px var(--heading);
+      color: white;
+      text-shadow: 0 10px 50px rgba(0,0,0,.3);
+      z-index: 1;
+    }
+
+    .float-card {
+      position: absolute;
+      z-index: 2;
+      padding: 13px 17px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 10px;
+      background: rgba(23,18,35,.88);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 12px 35px rgba(0,0,0,.25);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .float-card.one {
+      top: 48px;
+      left: -5px;
+    }
+
+    .float-card.two {
+      right: -5px;
+      bottom: 80px;
+    }
+
+    .float-card.three {
+      left: 10px;
+      bottom: 40px;
+    }
+
+    /* STATS */
+    .stats-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: #100d19;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stat {
+      padding: 30px 20px;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border: none;
+    }
+
+    .stat strong {
+      display: block;
+      font: 700 33px var(--heading);
+      color: var(--violet);
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* COURSES */
+    .courses {
+      background: #0d0a15;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+    }
+
+    .course-card {
+      position: relative;
+      min-height: 280px;
+      padding: 28px;
+      background: linear-gradient(145deg, #1a1627, #110e19);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      overflow: hidden;
+      transition: .35s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(180,123,255,.6);
+      background: linear-gradient(145deg, #241938, #15101f);
+    }
+
+    .course-card::after {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: rgba(155,92,255,.1);
+      right: -65px;
+      bottom: -75px;
+      filter: blur(4px);
+    }
+
+    .course-icon {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 13px;
+      background: rgba(155,92,255,.14);
+      font-size: 26px;
+      margin-bottom: 25px;
+    }
+
+    .course-card h3 {
+      font: 700 21px var(--heading);
+      margin-bottom: 12px;
+    }
+
+    .course-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.75;
+      max-width: 290px;
+    }
+
+    .course-link {
+      display: inline-flex;
+      margin-top: 23px;
+      color: var(--violet);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .about-visual {
+      position: relative;
+      min-height: 420px;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(165,96,255,.45), transparent 43%),
+        linear-gradient(145deg, #211435, #100d19);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .about-visual::before {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 50%;
+    }
+
+    .about-visual::after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 50%;
+    }
+
+    .about-visual span {
+      font: 700 95px var(--heading);
+      color: white;
+      text-shadow: 0 0 50px #b77aff;
+      z-index: 1;
+    }
+
+    .about-label {
+      position: absolute;
+      bottom: 22px;
+      left: 22px;
+      background: rgba(10,8,17,.8);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 13px 17px;
+      font-size: 12px;
+      z-index: 2;
+    }
+
+    .about-copy h2 {
+      font: 700 clamp(36px, 4.5vw, 54px)/1.08 var(--heading);
+      letter-spacing: -2px;
+      margin: 18px 0;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 13px;
+      margin: 27px 0 30px;
+    }
+
+    .check-list li {
+      font-size: 13px;
+      color: #e6dff0;
+    }
+
+    .check-list li::before {
+      content: "✦";
+      color: var(--violet);
+      margin-right: 12px;
+    }
+
+    /* SKILLS */
+    .skills {
+      background: #100d19;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 13px;
+    }
+
+    .skill {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface);
+      transition: .3s;
+    }
+
+    .skill:hover {
+      border-color: var(--purple);
+      transform: translateY(-5px);
+    }
+
+    .skill span {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .skill h3 {
+      font: 600 15px var(--heading);
+    }
+
+    .skill p {
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 7px;
+    }
+
+    /* PROJECTS */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+    }
+
+    .project-card {
+      position: relative;
+      min-height: 310px;
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      overflow: hidden;
+      background: linear-gradient(140deg, #35204d, #171021 75%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .project-card:nth-child(2) {
+      background: linear-gradient(140deg, #3b2058, #171021 75%);
+    }
+
+    .project-card::before {
+      content: "✳";
+      position: absolute;
+      right: 35px;
+      top: 12px;
+      font-size: 155px;
+      color: rgba(255,255,255,.09);
+    }
+
+    .project-card h3 {
+      font: 700 27px var(--heading);
+      margin-bottom: 8px;
+      z-index: 1;
+    }
+
+    .project-card p {
+      color: #c6b8d5;
+      font-size: 13px;
+      z-index: 1;
+    }
+
+    .project-tag {
+      display: inline-block;
+      width: fit-content;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #e2caff;
+      border: 1px solid rgba(255,255,255,.22);
+      padding: 7px 10px;
+      border-radius: 30px;
+      margin-bottom: 15px;
+      z-index: 1;
+    }
+
+    /* CTA */
+    .contact {
+      padding: 30px 0 110px;
+    }
+
+    .contact-box {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 85px 25px;
+      border: 1px solid rgba(200,151,255,.25);
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at 50% 100%, rgba(160,80,255,.27), transparent 50%),
+        linear-gradient(135deg, #211432, #120e1c);
+    }
+
+    .contact-box h2 {
+      font: 700 clamp(37px, 5vw, 62px)/1.1 var(--heading);
+      letter-spacing: -2px;
+      margin: 20px auto;
+      max-width: 700px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin: 0 auto 28px;
+      max-width: 530px;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      background: #08060d;
+      padding: 35px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--violet);
+    }
+
+    /* REVEAL ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-copy > p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions, .hero-note {
+        justify-content: center;
+      }
+
+      .hero-art {
+        min-height: 390px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-visual {
+        min-height: 330px;
+      }
+
+      .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .section {
+        padding: 78px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        padding: 25px 5%;
+        background: #100d19;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .hero {
+        padding: 70px 0 40px;
+        min-height: auto;
+      }
+
+      .hero-copy h1 {
+        letter-spacing: -2.5px;
+      }
+
+      .hero-art {
+        min-height: 330px;
+        transform: scale(.85);
+        margin: -20px 0;
+      }
+
+      .art-core {
+        width: 225px;
+        height: 260px;
+      }
+
+      .art-orbit {
+        width: 310px;
+        height: 310px;
+      }
+
+      .float-card {
+        font-size: 10px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat:nth-child(2) {
+        border-right: none;
+      }
+
+      .stat:nth-child(1),
+      .stat:nth-child(2) {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .course-grid,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .course-card {
+        min-height: 250px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .contact-box {
+        padding: 65px 20px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-copy h1 {
+        font-size: 45px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header class="nav-wrap"><nav class="nav container"><a href="#home" class="brand"><div class="brand-mark">D</div><span>Dazzling <small>Skill</small></span></a><div class="nav-links" id="navLinks"><a href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div><a class="nav-cta" href="#courses">Explore Courses ↗</a><button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button></nav></header>
-<main>
-<section class="hero container" id="home"><div class="hero-copy"><div class="eyebrow">Learn skills that move you forward</div><h1>Build your future.<br><span class="gradient-text">Make it digital.</span></h1><p>Learn in-demand digital skills with hands-on projects, practical training, and a clear path from beginner to confident creator.</p><div class="hero-actions"><a class="btn-primary" href="#courses">Explore learning paths <span>↗</span></a><a class="btn-outline" href="#about">Discover Dazzling Skill <span>→</span></a></div><div class="hero-stats"><div class="stat"><strong>Practical</strong><span>Project-based learning</span></div><div class="stat"><strong>Career-ready</strong><span>Skills for real work</span></div><div class="stat"><strong>Step by step</strong><span>Beginner-friendly</span></div></div></div><div class="hero-visual"><div class="orb"><div class="orb-core"></div></div><div class="orbit-tag tag-one"><div class="mini-icon">⌘</div><div><b>Digital Skills</b><small>Learn by doing</small></div></div><div class="orbit-tag tag-two"><div class="mini-icon">↗</div><div><b>Grow Online</b><small>Ideas into impact</small></div></div><div class="orbit-tag tag-three"><div class="mini-icon">✦</div><div><b>Build Projects</b><small>Practice. Create. Improve.</small></div></div><span class="spark s1"></span><span class="spark s2"></span></div></section>
-<section class="trust-strip"><div class="container trust-inner"><span class="trust-label">Explore your learning journey</span><span class="trust-item"><i>✦</i> Digital Marketing</span><span class="trust-item"><i>✦</i> Web Development</span><span class="trust-item"><i>✦</i> Creative Skills</span><span class="trust-item"><i>✦</i> Practical Projects</span></div></section>
-<section class="section container" id="courses"><div class="section-head reveal"><div class="eyebrow">Learning paths</div><h2>Skills that turn curiosity<br>into <span class="gradient-text">opportunity.</span></h2><p>Choose a skill, build a strong foundation, and learn by creating real work—not just watching lessons.</p></div><div class="course-grid">
-<div class="course-card reveal" style="--glow:#4d8dff"><div class="course-icon">⌕</div><h3>Search Engine Optimization</h3><p>Understand keyword research, on-page SEO, technical basics, content strategy, and how websites improve visibility.</p><div class="course-bottom"><span>Organic growth</span><a href="#contact">Explore ↗</a></div></div>
-<div class="course-card reveal" style="--glow:#b56dff"><div class="course-icon">◈</div><h3>Google Ads</h3><p>Learn search campaigns, ad groups, keywords, bidding, conversion tracking, and campaign optimization.</p><div class="course-bottom"><span>Paid advertising</span><a href="#contact">Explore ↗</a></div></div>
-<div class="course-card reveal" style="--glow:#4dffc5"><div class="course-icon">◎</div><h3>Meta Ads</h3><p>Build Facebook and Instagram campaigns, audiences, creatives, budgets, and performance reports.</p><div class="course-bottom"><span>Social advertising</span><a href="#contact">Explore ↗</a></div></div>
-<div class="course-card reveal" style="--glow:#ffb45c"><div class="course-icon">✳</div><h3>Social Media Marketing</h3><p>Create content plans, grow social profiles, understand engagement, and develop a consistent brand voice.</p><div class="course-bottom"><span>Content & growth</span><a href="#contact">Explore ↗</a></div></div>
-<div class="course-card reveal" style="--glow:#61ddff"><div class="course-icon">〈/〉</div><h3>Web Development</h3><p>Start with HTML, CSS, and JavaScript to design responsive websites and interactive user experiences.</p><div class="course-bottom"><span>Build for the web</span><a href="#contact">Explore ↗</a></div></div>
-<div class="course-card reveal" style="--glow:#ff6b9c"><div class="course-icon">✎</div><h3>Content Marketing</h3><p>Learn to plan useful content, write for your audience, tell stories, and support marketing goals.</p><div class="course-bottom"><span>Strategy & storytelling</span><a href="#contact">Explore ↗</a></div></div>
-</div></section>
-<section class="section container" id="about"><div class="about-grid"><div class="about-art reveal"><div class="about-dashboard"><div class="dash-top"><span>DAZZLING SKILL / LEARNING</span><span>● Live</span></div><div class="dash-title">Your skills, in progress.</div><div class="dash-bars"><i style="--h:32%"></i><i style="--h:58%"></i><i style="--h:44%"></i><i style="--h:77%"></i><i style="--h:65%"></i><i style="--h:92%"></i><i style="--h:82%"></i></div><div class="dash-kpis"><div class="dash-kpi"><b>Learn</b><small>Build foundations</small></div><div class="dash-kpi"><b>Create</b><small>Practice projects</small></div><div class="dash-kpi"><b>Grow</b><small>Keep improving</small></div></div></div></div><div class="about-content reveal"><div class="eyebrow">About Dazzling Skill</div><h2>Learn with purpose.<br><span class="gradient-text">Create with confidence.</span></h2><p>Dazzling Skill is focused on helping learners build practical digital knowledge. Explore the tools, understand how they work, and turn what you learn into projects and real-world experience.</p><div class="feature-list"><div class="feature"><i>✓</i> Practical learning</div><div class="feature"><i>✓</i> Beginner-friendly</div><div class="feature"><i>✓</i> Project-focused</div><div class="feature"><i>✓</i> Skill development</div></div><a class="btn-outline" href="#contact">Learn more about us ↗</a></div></div></section>
-<section class="section skills" id="skills"><div class="container"><div class="section-head reveal"><div class="eyebrow">What you'll explore</div><h2>Tools for the <span class="gradient-text">digital world.</span></h2><p>Build familiarity with platforms and technologies used by marketers, creators, and web developers.</p></div><div class="skill-grid"><div class="skill-box reveal"><div class="skill-symbol">G</div><h3>Google ecosystem</h3><p>Google Ads, Analytics, Search Console, Keyword Planner</p></div><div class="skill-box reveal"><div class="skill-symbol">◉</div><h3>Meta ecosystem</h3><p>Facebook, Instagram, Ads Manager, audience insights</p></div><div class="skill-box reveal"><div class="skill-symbol">〈/〉</div><h3>Web technologies</h3><p>HTML, CSS, JavaScript, responsive layouts</p></div><div class="skill-box reveal"><div class="skill-symbol">✧</div><h3>Creative tools</h3><p>Content planning, visual design, copywriting, AI tools</p></div></div></div></section>
-<section class="section container" id="projects"><div class="section-head reveal"><div class="eyebrow">Learn through doing</div><h2>Practice today.<br><span class="gradient-text">Build something real.</span></h2><p>Turn your learning into a portfolio of work. Every project helps you sharpen your skills and show what you can do.</p></div><div class="project-grid"><article class="project reveal"><div class="project-visual">⌘</div><div class="project-info"><span class="project-tag">Web project</span><h3>Responsive Website Design</h3><p>Plan and build a clean, responsive website from layout to launch.</p></div></article><article class="project reveal"><div class="project-visual">◈</div><div class="project-info"><span class="project-tag">Marketing project</span><h3>Campaign Practice</h3><p>Draft campaign structure, targeting, creative ideas, and metrics.</p></div></article><article class="project reveal"><div class="project-visual">✳</div><div class="project-info"><span class="project-tag">SEO project</span><h3>SEO Content Plan</h3><p>Research keywords, map topics, and optimize a content page.</p></div></article></div></section>
-<section class="cta container" id="contact"><div class="cta-panel reveal"><div><div class="eyebrow">Start your journey</div><h2>Ready to learn a new skill?</h2><p>Take the first step toward your digital future. Let's connect and explore what you can learn.</p></div><a class="btn-primary" href="https://dazzlingskill.com" target="_blank" rel="noopener">Connect with Dazzling Skill ↗</a></div></section>
-</main>
-<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-about"><a class="brand" href="#home"><div class="brand-mark">D</div><span>Dazzling <small>Skill</small></span></a><p>Learn digital skills, practice with purpose, and create your next opportunity. Your journey starts with one skill.</p><div class="socials"><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Facebook">fb</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="YouTube">yt</a></div></div><div><h4>Explore</h4><div class="footer-links"><a href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About us</a><a href="#projects">Projects</a></div></div><div><h4>Learning</h4><div class="footer-links"><a href="#courses">SEO</a><a href="#courses">Google Ads</a><a href="#courses">Meta Ads</a><a href="#courses">Web Development</a></div></div><div><h4>Connect</h4><div class="footer-links"><a href="https://dazzlingskill.com" target="_blank" rel="noopener">Official website ↗</a><a href="#contact">Course enquiry</a><a href="#contact">Get in touch</a></div></div></div><div class="copyright"><span>© <span id="year"></span> Dazzling Skill. All rights reserved.</span><span>Learn · Build · Grow</span></div></div></footer>
-<script>
-const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');menuBtn.addEventListener('click',()=>{navLinks.classList.toggle('open');menuBtn.textContent=navLinks.classList.contains('open')?'✕':'☰'});
-navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.textContent='☰'}));
-document.getElementById('year').textContent=new Date().getFullYear();
-const revealItems=document.querySelectorAll('.reveal');if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});revealItems.forEach(el=>observer.observe(el));}else{revealItems.forEach(el=>el.classList.add('visible'));}
-</script>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-icon">✦</span>
+        <span>Dazzling<span class="gradient-text">Skill.</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+
+      <a class="nav-cta" href="#contact">Let's Talk ↗</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Your Future Starts Here</span>
+
+          <h1>
+            Learn Skills.<br>
+            <span class="gradient-text">Create Impact.</span>
+          </h1>
+
+          <p>
+            Turn your ambition into real-world expertise. Discover the
+            digital skills, creative thinking and practical knowledge
+            you need to build your future.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#courses" class="btn">Explore Courses ↗</a>
+            <a href="#about" class="btn btn-outline">Discover Us</a>
+          </div>
+
+          <div class="hero-note">
+            <div class="avatar-stack">
+              <span>✦</span>
+              <span>DS</span>
+              <span>✧</span>
+            </div>
+            <span>Learn. Practice. Grow. Repeat.</span>
+          </div>
+        </div>
+
+        <div class="hero-art reveal">
+          <div class="art-orbit"></div>
+          <div class="art-core">
+            <div class="art-symbol">DS</div>
+          </div>
+          <div class="float-card one">✦ Creative Learning</div>
+          <div class="float-card two">↗ Future Ready</div>
+          <div class="float-card three">⚡ Digital Skills</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-strip">
+      <div class="container stats-grid">
+        <div class="stat">
+          <strong>06+</strong>
+          <span>Career-Focused Courses</span>
+        </div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>Practical Learning Focus</span>
+        </div>
+        <div class="stat">
+          <strong>24/7</strong>
+          <span>Learn at Your Pace</span>
+        </div>
+        <div class="stat">
+          <strong>∞</strong>
+          <span>Growth Possibilities</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSES -->
+    <section class="section courses" id="courses">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">What You Can Learn</span>
+          <h2>Build your next<br><span class="gradient-text">big skill.</span></h2>
+          <p>Explore practical digital courses designed to help you learn valuable skills and move forward with confidence.</p>
+        </div>
+
+        <div class="course-grid">
+          <article class="course-card reveal">
+            <div class="course-icon">⌕</div>
+            <h3>SEO Mastery</h3>
+            <p>Learn search engine optimization, keyword research, on-page SEO and strategies to improve website visibility.</p>
+            <a href="#contact" class="course-link">Explore Course ↗</a>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-icon">◉</div>
+            <h3>Google Ads</h3>
+            <p>Understand paid search campaigns, audience targeting, conversion tracking and performance optimization.</p>
+            <a href="#contact" class="course-link">Explore Course ↗</a>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-icon">◎</div>
+            <h3>Meta Ads</h3>
+            <p>Discover Facebook and Instagram advertising, campaign setup, creative testing and audience strategies.</p>
+            <a href="#contact" class="course-link">Explore Course ↗</a>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-icon">✳</div>
+            <h3>Social Media Marketing</h3>
+            <p>Build social media strategies, create engaging content and understand how to grow digital communities.</p>
+            <a href="#contact" class="course-link">Explore Course ↗</a>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-icon">⌘</div>
+            <h3>Web Development</h3>
+            <p>Learn the foundations of modern websites with HTML, CSS, JavaScript and responsive design.</p>
+            <a href="#contact" class="course-link">Explore Course ↗</a>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-icon">✎</div>
+            <h3>Content Marketing</h3>
+            <p>Develop content strategies, storytelling, copywriting and useful content that connects with audiences.</p>
+            <a href="#contact" class="course-link">Explore Course ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <span>DS.</span>
+          <div class="about-label">Ideas into Skills. Skills into Growth.</div>
+        </div>
+
+        <div class="about-copy reveal">
+          <span class="eyebrow">Who We Are</span>
+          <h2>We make learning <span class="gradient-text">matter.</span></h2>
+          <p>
+            Dazzling Skill is built around one simple idea: the right skills
+            can open new opportunities. We focus on helping learners
+            understand digital tools and build practical knowledge.
+          </p>
+          <p>
+            Whether you are starting your journey or upgrading your
+            capabilities, our goal is to make learning approachable,
+            useful and relevant to the digital world.
+          </p>
+
+          <ul class="check-list">
+            <li>Practical, skill-focused learning</li>
+            <li>Modern digital industry topics</li>
+            <li>Beginner-friendly learning approach</li>
+            <li>Knowledge you can put into practice</li>
+          </ul>
+
+          <a href="#contact" class="btn">Start Your Journey ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Your Skill Toolkit</span>
+          <h2>Skills that move<br><span class="gradient-text">you forward.</span></h2>
+          <p>Explore the digital capabilities that help you create, communicate, market and build.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill reveal"><span>⌕</span><h3>SEO Strategy</h3><p>Search visibility</p></div>
+          <div class="skill reveal"><span>◉</span><h3>Paid Advertising</h3><p>Campaign management</p></div>
+          <div class="skill reveal"><span>✳</span><h3>Social Media</h3><p>Audience engagement</p></div>
+          <div class="skill reveal"><span>⌘</span><h3>Web Design</h3><p>Digital experiences</p></div>
+          <div class="skill reveal"><span>✎</span><h3>Copywriting</h3><p>Content creation</p></div>
+          <div class="skill reveal"><span>◈</span><h3>Analytics</h3><p>Data understanding</p></div>
+          <div class="skill reveal"><span>✦</span><h3>Creativity</h3><p>Visual storytelling</p></div>
+          <div class="skill reveal"><span>↗</span><h3>Growth Mindset</h3><p>Continuous learning</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Learning in Action</span>
+          <h2>Ideas become<br><span class="gradient-text">real projects.</span></h2>
+          <p>Use your knowledge to explore practical concepts, build your portfolio and showcase what you can do.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <span class="project-tag">DIGITAL MARKETING</span>
+            <h3>Grow a Digital Brand</h3>
+            <p>Explore content, campaigns and search strategies for a brand.</p>
+          </article>
+
+          <article class="project-card reveal">
+            <span class="project-tag">WEB DEVELOPMENT</span>
+            <h3>Build the Web</h3>
+            <p>Create responsive web experiences with modern technologies.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-box reveal">
+          <span class="eyebrow">Your Next Chapter</span>
+          <h2>Ready to make your <span class="gradient-text">move?</span></h2>
+          <p>
+            Your next opportunity could begin with one new skill.
+            Connect with Dazzling Skill and take the first step.
+          </p>
+          <a href="https://dazzlingskill.com" class="btn" target="_blank" rel="noopener noreferrer">Visit Dazzling Skill ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <a href="#home" class="logo">
+        <span class="logo-icon">✦</span>
+        <span>Dazzling<span class="gradient-text">Skill.</span></span>
+      </a>
+
+      <p>© <span id="year"></span> Dazzling Skill. All rights reserved.</p>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    // Close mobile menu after clicking a link
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Dynamic copyright year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12
+      });
+
+      revealElements.forEach(element => observer.observe(element));
+    } else {
+      revealElements.forEach(element => element.classList.add("visible"));
+    }
+  </script>
 </body>
 </html>
+
+
